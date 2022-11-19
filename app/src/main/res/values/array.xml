@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- preferences.xml의 <ListPreference/> 가 참조하는 목록 데이터 -->
+<resources>
+    <!-- 각 태그의 name에 해당하는 부분은 ListPreference의 entries, entryValue로 사용됨   -->
+    <string-array name="action_list">
+        <item>action 1</item>
+        <item>action 2</item>
+        <item>action 3</item>
+        <item>action 4</item>
+    </string-array>
+
+    <string-array name="action_values">
+        <item>values 1</item>
+        <item>values 2</item>
+        <item>values 3</item>
+        <item>values 4</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--  <PreferenceCategory> 태그 사용하여 기능, 옵션 2개 카테고리 생성 -->
+<!--  카테고리는 주로 입력 필드의 그룹명을 출력하는 용도로 사용됨  -->
+
+<!--  1  -->
+<!--  <PreferenceCategory 설정사항 생성위치 ></PreferenceCategory> -->
+<!--  설정사항 생성위치에 타이틀과 아이콘 할당공간 입력  -->
+
+<!--  카테고리 속성  -->
+<!--  iconSpaceReserved=false는 아이콘을 위해 할당된 공간을 없애라는 의미  -->
+<!-- 이 속성을 추가하지 않으면 아이콘 공간이 남아있어 왼쪽으로 패딩이 있는 것처럼 보임 -->
+
+<!--  2  -->
+<!--  카테고리 안에 실제 입력 필드 구성  -->
+
+<!--  입력 필드들의 공통 속성  -->
+<!--  key : 현재 어떤 값이 저장되어있는지(on/off 등) key를 통해 값을 읽을 수 있음-->
+<!--  icon : 보여주는 아이콘의 위치, 지정하지 않으면 빈 칸이 생길 수 있음  -->
+<!--  defaultValue : 초기 값의 on/off  -->
+
+    <PreferenceCategory
+        android:title="기능 설정"
+        android:iconSpaceReserved="false">
+
+        <!--  체크박스 생성  -->
+        <CheckBoxPreference
+            android:key="key_add_shortcut"
+            android:title="바로가기 아이콘"
+            android:icon="@mipmap/ic_launcher"
+            android:defaultValue="true"/>
+
+        <!--  스위치 생성  -->
+        <SwitchPreference
+            android:key="key_switch_on"
+            android:title="화면 켜짐"
+            android:icon="@mipmap/ic_launcher"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="옵션 설정"
+        android:iconSpaceReserved="false">
+
+        <!--  텍스트 입력 할 수 있는 Preference  -->
+        <EditTextPreference
+            android:key="key_edit_name"
+            android:title="이름"
+            android:summary="이름을 입력하세요"
+            android:dialogTitle="이름 입력"
+            android:iconSpaceReserved="false"/>
+
+        <!--  ListPreference: 목록 중 1를 선택할 수 있는 Preference  -->
+        <!--  XML로 정의된 목록 데이터가 필요하여 일단 이름만 먼저 정의하여 경로 기입  -->
+        <ListPreference
+            android:key="key_set_item"
+            android:title="목록 선택형"
+            android:summary="목록"
+            android:entries="@array/action_list"
+            android:entryValues="@array/action_values"
+            android:dialogTitle="목록 선택 제목"
+            app:iconSpaceReserved="false"/>
+
+        <!--  PreferenceScreen: 다른 화면으로 넘어가는 Preference  -->
+        <!--  intent 인자를 주어 브라우저가 android.com을 열도록 설정함 (링크비슷)  -->
+        <PreferenceScreen
+            android:title="설정 화면 타이틀"
+            android:summary="설정 화면 요약"
+            android:iconSpaceReserved="false">
+
+            <intent android:action="android.intent.action.VIEW"
+                android:data="http://www.android.com"/>
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+<!--  이어서 ListPreference에서 먼저 정의한 목록데이터 파일(array) 생성  -->
+<!--  res - values 디렉터리 우클릭 - New - Values Resource File  -->
+<!--  File name(파일명) : array  -->
+<!--  array.xml 파일 생성  -->
+
+</PreferenceScreen>
