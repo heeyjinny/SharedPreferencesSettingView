@@ -10,8 +10,9 @@
 <!--  설정사항 생성위치에 타이틀과 아이콘 할당공간 입력  -->
 
 <!--  카테고리 속성  -->
-<!--  iconSpaceReserved=false는 아이콘을 위해 할당된 공간을 없애라는 의미  -->
+<!--  app: iconSpaceReserved=false는 아이콘을 위해 할당된 공간을 없애라는 의미  -->
 <!-- 이 속성을 추가하지 않으면 아이콘 공간이 남아있어 왼쪽으로 패딩이 있는 것처럼 보임 -->
+<!--  android: 가 아닌 app: 에 설정해야함 주의!  -->
 
 <!--  2  -->
 <!--  카테고리 안에 실제 입력 필드 구성  -->
@@ -23,7 +24,7 @@
 
     <PreferenceCategory
         android:title="기능 설정"
-        android:iconSpaceReserved="false">
+        app:iconSpaceReserved="false">
 
         <!--  체크박스 생성  -->
         <CheckBoxPreference
@@ -43,7 +44,7 @@
 
     <PreferenceCategory
         android:title="옵션 설정"
-        android:iconSpaceReserved="false">
+        app:iconSpaceReserved="false">
 
         <!--  텍스트 입력 할 수 있는 Preference  -->
         <EditTextPreference
@@ -51,7 +52,7 @@
             android:title="이름"
             android:summary="이름을 입력하세요"
             android:dialogTitle="이름 입력"
-            android:iconSpaceReserved="false"/>
+            app:iconSpaceReserved="false"/>
 
         <!--  ListPreference: 목록 중 1를 선택할 수 있는 Preference  -->
         <!--  XML로 정의된 목록 데이터가 필요하여 일단 이름만 먼저 정의하여 경로 기입  -->
@@ -68,8 +69,8 @@
         <!--  intent 인자를 주어 브라우저가 android.com을 열도록 설정함 (링크비슷)  -->
         <PreferenceScreen
             android:title="설정 화면 타이틀"
-            android:summary="설정 화면 요약"
-            android:iconSpaceReserved="false">
+            android:summary="설정 화면 요약 사이트 연결"
+            app:iconSpaceReserved="false">
 
             <intent android:action="android.intent.action.VIEW"
                 android:data="http://www.android.com"/>
