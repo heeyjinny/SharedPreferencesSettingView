@@ -15,4 +15,7 @@ class SettingFragment: PreferenceFragmentCompat() {
         addPreferencesFromResource(R.xml.preferences)
 
     }
+
+    //activity_main.xml 에 <fragment/> 화면을 추가하여 SettingFragment와 연결
+
 }

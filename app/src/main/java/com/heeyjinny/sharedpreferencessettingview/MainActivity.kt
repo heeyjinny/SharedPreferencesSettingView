@@ -31,14 +31,5 @@ class MainActivity : AppCompatActivity() {
 
         //생성한 preferences.xml 수정
 
-
-
-
-
-
-
-
-
-
     }
 }
