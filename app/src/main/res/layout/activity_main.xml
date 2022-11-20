@@ -11,12 +11,10 @@
         android:id="@+id/fragmentContainerView"
         android:name="com.heeyjinny.sharedpreferencessettingview.SettingFragment"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="wrap_content"/>
 
 
 <!--  수정한 것...
-프래그먼트  tools:ignore="MissingConstraints"
 라이브러리 업그레이드...
 그레이들 프래그먼트 라이브러리 버전 다운 1.2.0 -> 1.1.1
 경고메시지에 따라  targetSdk , compileSdk 를 32 -> 33 으로
