@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints" />
 
+
 <!--  수정한 것...
 프래그먼트  tools:ignore="MissingConstraints"
 라이브러리 업그레이드...
