@@ -7,14 +7,15 @@
     tools:context=".MainActivity">
 
 
+<!--  SettingFragment 추가  -->
     <fragment
         android:id="@+id/fragmentContainerView"
         android:name="com.heeyjinny.sharedpreferencessettingview.SettingFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
-<!--  수정한 것...
+<!--  설정화면 에뮬레이터 오류로 인해 수정한 것...
 라이브러리 업그레이드...
 그레이들 프래그먼트 라이브러리 버전 다운 1.2.0 -> 1.1.1
 경고메시지에 따라  targetSdk , compileSdk 를 32 -> 33 으로
@@ -23,5 +24,7 @@
 
 해결방법 알아볼 것...
 -->
+
+<!--  설정 값 사용을 위해 MainActivity.kt 코드 작성  -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

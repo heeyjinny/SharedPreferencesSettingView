@@ -59,7 +59,7 @@
         <ListPreference
             android:key="key_set_item"
             android:title="목록 선택형"
-            android:summary="목록"
+            android:summary="목록을 선택하세요"
             android:entries="@array/action_list"
             android:entryValues="@array/action_values"
             android:dialogTitle="목록 선택 제목"
@@ -68,8 +68,8 @@
         <!--  PreferenceScreen: 다른 화면으로 넘어가는 Preference  -->
         <!--  intent 인자를 주어 브라우저가 android.com을 열도록 설정함 (링크비슷)  -->
         <PreferenceScreen
-            android:title="설정 화면 타이틀"
-            android:summary="설정 화면 요약 사이트 연결"
+            android:title="Android 홈페이지 연결"
+            android:summary="사이트로 연결 합니다"
             app:iconSpaceReserved="false">
 
             <intent android:action="android.intent.action.VIEW"
